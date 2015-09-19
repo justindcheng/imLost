@@ -24,8 +24,29 @@ class ViewController: UIViewController {
         if (prefs.boolForKey("firsttimeflag") == false) {
             prefs.setBool(true, forKey: "firsttimeflag")
             prefs.synchronize()
-            //self.presentViewController(, animated: <#T##Bool#>, completion: <#T##(() -> Void)?##(() -> Void)?##() -> Void#>)
+            let ftvc = firstTime()
+            self.presentViewController(ftvc, animated: true, completion: { () -> Void in
+                self.loggedIn()
+            })
         }
+        
+        
+    }
+    
+    func loggedIn()
+    {
+        let prefs = NSUserDefaults.standardUserDefaults()
+        if (prefs.boolForKey("sethomeflag") == false) {
+            let shvc = setHome()
+            self.presentViewController(shvc, animated: true, completion: { () -> Void in
+                self.settedHome()
+            })
+        }
+    }
+    
+    func settedHome()
+    {
+        
     }
 
     override func didReceiveMemoryWarning() {

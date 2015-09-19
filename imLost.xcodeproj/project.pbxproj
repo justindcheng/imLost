@@ -32,6 +32,7 @@
 		D0CDF1DE1BADD11E007BFBEF /* firstTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CDF1DD1BADD11E007BFBEF /* firstTime.swift */; settings = {ASSET_TAGS = (); }; };
 		D0CDF1E71BADD669007BFBEF /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0CDF1E51BADD669007BFBEF /* FBSDKCoreKit.framework */; settings = {ASSET_TAGS = (); }; };
 		D0CDF1E81BADD669007BFBEF /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0CDF1E61BADD669007BFBEF /* FBSDKLoginKit.framework */; settings = {ASSET_TAGS = (); }; };
+		D0CDF1EA1BADE2AC007BFBEF /* setHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CDF1E91BADE2AC007BFBEF /* setHome.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXBuildRule section */
@@ -96,6 +97,7 @@
 		D0CDF1E31BADD44A007BFBEF /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		D0CDF1E51BADD669007BFBEF /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		D0CDF1E61BADD669007BFBEF /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		D0CDF1E91BADE2AC007BFBEF /* setHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = setHome.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +185,7 @@
 				D0CDF1911BADC966007BFBEF /* AppDelegate.swift */,
 				D0CDF1E31BADD44A007BFBEF /* Bridging-Header.h */,
 				D0CDF1931BADC966007BFBEF /* ViewController.swift */,
+				D0CDF1E91BADE2AC007BFBEF /* setHome.swift */,
 				D0CDF1DD1BADD11E007BFBEF /* firstTime.swift */,
 				D0CDF1951BADC966007BFBEF /* Main.storyboard */,
 				D0CDF1981BADC966007BFBEF /* Assets.xcassets */,
@@ -347,6 +350,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0CDF1941BADC966007BFBEF /* ViewController.swift in Sources */,
+				D0CDF1EA1BADE2AC007BFBEF /* setHome.swift in Sources */,
 				D0CDF1921BADC966007BFBEF /* AppDelegate.swift in Sources */,
 				D0CDF1DE1BADD11E007BFBEF /* firstTime.swift in Sources */,
 			);

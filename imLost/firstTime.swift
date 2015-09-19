@@ -35,6 +35,7 @@ class firstTime: UIViewController, FBSDKLoginButtonDelegate {
     
     func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {
         print("User Logged In")
+        returnUserData()
         
         if ((error) != nil)
         {
