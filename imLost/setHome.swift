@@ -13,6 +13,7 @@ import MapKit
 class setHome: UIViewController {
     
     @IBOutlet weak var map: MKMapView?
+    @IBOutlet weak var number: UITextField?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +26,9 @@ class setHome: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func pressedDone() {
+        
+    }
     
 }
 

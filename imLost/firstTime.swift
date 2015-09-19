@@ -23,7 +23,7 @@ class firstTime: UIViewController, FBSDKLoginButtonDelegate {
             let loginView : FBSDKLoginButton = FBSDKLoginButton()
             self.view.addSubview(loginView)
             loginView.center = self.view.center
-            loginView.readPermissions = ["public_profile", "email", "user_friends"]
+            loginView.readPermissions = ["public_profile"]
             loginView.delegate = self
         }
     }
@@ -35,7 +35,6 @@ class firstTime: UIViewController, FBSDKLoginButtonDelegate {
     
     func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {
         print("User Logged In")
-        returnUserData()
         
         if ((error) != nil)
         {
@@ -45,6 +44,7 @@ class firstTime: UIViewController, FBSDKLoginButtonDelegate {
             // Handle cancellations
         }
         else {
+            returnUserData()
             // If you ask for multiple permissions at once, you
             // should check if specific permissions missing
             if result.grantedPermissions.contains("email")
@@ -71,10 +71,13 @@ class firstTime: UIViewController, FBSDKLoginButtonDelegate {
             else
             {
                 print("fetched user: \(result)")
+                let prefs = NSUserDefaults.standardUserDefaults()
                 let userName : NSString = result.valueForKey("name") as! NSString
                 print("User Name is: \(userName)")
-                let userEmail : NSString = result.valueForKey("email") as! NSString
-                print("User Email is: \(userEmail)")
+                prefs.setObject(result, forKey: "id")
+                prefs.setObject(userName, forKey: "name")
+                prefs.setBool(true, forKey: "firsttimeflag")
+                prefs.synchronize()
             }
         })
     }
