@@ -29,7 +29,22 @@
 		D0CDF1D81BADCB58007BFBEF /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0CDF1D71BADCB58007BFBEF /* CFNetwork.framework */; };
 		D0CDF1DA1BADCB66007BFBEF /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0CDF1D91BADCB66007BFBEF /* StoreKit.framework */; };
 		D0CDF1DC1BADCB6E007BFBEF /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0CDF1DB1BADCB6E007BFBEF /* SystemConfiguration.framework */; };
+		D0CDF1DE1BADD11E007BFBEF /* firstTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CDF1DD1BADD11E007BFBEF /* firstTime.swift */; settings = {ASSET_TAGS = (); }; };
+		D0CDF1E71BADD669007BFBEF /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0CDF1E51BADD669007BFBEF /* FBSDKCoreKit.framework */; settings = {ASSET_TAGS = (); }; };
+		D0CDF1E81BADD669007BFBEF /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0CDF1E61BADD669007BFBEF /* FBSDKLoginKit.framework */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXBuildRule section */
+		D0CDF1E41BADD48C007BFBEF /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.proxy.script;
+			fileType = pattern.proxy;
+			isEditable = 1;
+			outputFiles = (
+			);
+			script = "";
+		};
+/* End PBXBuildRule section */
 
 /* Begin PBXContainerItemProxy section */
 		D0CDF1A31BADC966007BFBEF /* PBXContainerItemProxy */ = {
@@ -77,6 +92,10 @@
 		D0CDF1D71BADCB58007BFBEF /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		D0CDF1D91BADCB66007BFBEF /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		D0CDF1DB1BADCB6E007BFBEF /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		D0CDF1DD1BADD11E007BFBEF /* firstTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = firstTime.swift; sourceTree = "<group>"; };
+		D0CDF1E31BADD44A007BFBEF /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		D0CDF1E51BADD669007BFBEF /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		D0CDF1E61BADD669007BFBEF /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +103,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0CDF1E81BADD669007BFBEF /* FBSDKLoginKit.framework in Frameworks */,
 				D0CDF1DC1BADCB6E007BFBEF /* SystemConfiguration.framework in Frameworks */,
 				D0CDF1DA1BADCB66007BFBEF /* StoreKit.framework in Frameworks */,
 				D0CDF1D81BADCB58007BFBEF /* CFNetwork.framework in Frameworks */,
@@ -97,6 +117,7 @@
 				D0CDF1C71BADCAEC007BFBEF /* libsqlite3.0.tbd in Frameworks */,
 				D0CDF1C81BADCAEC007BFBEF /* libsqlite3.tbd in Frameworks */,
 				D0CDF1C21BADC9A8007BFBEF /* Parse.framework in Frameworks */,
+				D0CDF1E71BADD669007BFBEF /* FBSDKCoreKit.framework in Frameworks */,
 				D0CDF1C41BADC9F6007BFBEF /* MapKit.framework in Frameworks */,
 				D0CDF1C11BADC9A8007BFBEF /* Bolts.framework in Frameworks */,
 			);
@@ -122,6 +143,8 @@
 		D0CDF1851BADC966007BFBEF = {
 			isa = PBXGroup;
 			children = (
+				D0CDF1E51BADD669007BFBEF /* FBSDKCoreKit.framework */,
+				D0CDF1E61BADD669007BFBEF /* FBSDKLoginKit.framework */,
 				D0CDF1DB1BADCB6E007BFBEF /* SystemConfiguration.framework */,
 				D0CDF1D91BADCB66007BFBEF /* StoreKit.framework */,
 				D0CDF1D71BADCB58007BFBEF /* CFNetwork.framework */,
@@ -158,7 +181,9 @@
 			isa = PBXGroup;
 			children = (
 				D0CDF1911BADC966007BFBEF /* AppDelegate.swift */,
+				D0CDF1E31BADD44A007BFBEF /* Bridging-Header.h */,
 				D0CDF1931BADC966007BFBEF /* ViewController.swift */,
+				D0CDF1DD1BADD11E007BFBEF /* firstTime.swift */,
 				D0CDF1951BADC966007BFBEF /* Main.storyboard */,
 				D0CDF1981BADC966007BFBEF /* Assets.xcassets */,
 				D0CDF19A1BADC966007BFBEF /* LaunchScreen.storyboard */,
@@ -197,6 +222,7 @@
 				D0CDF18C1BADC966007BFBEF /* Resources */,
 			);
 			buildRules = (
+				D0CDF1E41BADD48C007BFBEF /* PBXBuildRule */,
 			);
 			dependencies = (
 			);
@@ -322,6 +348,7 @@
 			files = (
 				D0CDF1941BADC966007BFBEF /* ViewController.swift in Sources */,
 				D0CDF1921BADC966007BFBEF /* AppDelegate.swift in Sources */,
+				D0CDF1DE1BADD11E007BFBEF /* firstTime.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -471,6 +498,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = hochingc.imLost;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "imLost/Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -486,6 +514,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = hochingc.imLost;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "imLost/Bridging-Header.h";
 			};
 			name = Release;
 		};

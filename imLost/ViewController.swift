@@ -19,6 +19,13 @@ class ViewController: UIViewController {
         testObject.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
             print("Object has been saved.")
         }
+        
+        let prefs = NSUserDefaults.standardUserDefaults()
+        if (prefs.boolForKey("firsttimeflag") == false) {
+            prefs.setBool(true, forKey: "firsttimeflag")
+            prefs.synchronize()
+            //self.presentViewController(, animated: <#T##Bool#>, completion: <#T##(() -> Void)?##(() -> Void)?##() -> Void#>)
+        }
     }
 
     override func didReceiveMemoryWarning() {
